@@ -1,17 +1,20 @@
 """
     Example script to load a sequence and a 3D model
 """
+import argparse
+
 import cv2
 import numpy as np
+import os
 
 from ulaval_6dof_object_tracking.utils.model_renderer import ModelRenderer
 from ulaval_6dof_object_tracking.utils.sequence_loader import SequenceLoader
 
-GREEN_HUE = 120/2
-RED_HUE = 230/2
+GREEN_HUE = 120 / 2
+RED_HUE = 230 / 2
 BLUE_HUE = 0
 LIGH_BLUE_HUE = 20
-PURPLE_HUE = 300/2
+PURPLE_HUE = 300 / 2
 
 BRIGHTNESS = 100
 
@@ -44,17 +47,35 @@ def image_blend_gray(foreground, background):
         mask = np.all(mask, axis=2)[:, :, np.newaxis]
     return background_gray[:, :, np.newaxis] * mask + foreground
 
-if __name__ == '__main__':
-    object_id = "clock"
 
-    model_path = "/media/mathieu/e912e715-2be7-4fa2-8295-5c3ef1369dd0/dataset/3D_models/{}/geometry.ply".format(object_id)
-    sequence_path = "/media/mathieu/e912e715-2be7-4fa2-8295-5c3ef1369dd0/eccv_backup/Sequences/processed/{}_fix_occluded_2".format(object_id)
+if __name__ == '__main__':
+
+    parser = argparse.ArgumentParser(description='Show sequence')
+    parser.add_argument('-r', '--root', help="root path", action="store", default="../sample")
+    parser.add_argument('-s', '--sequence',
+                        help="Available sequences : \n"
+                             "stability_near_[1-4], stability_far_[1-4], stability_occluded_[1-4]\n"
+                             "occlusion_0, occlusion_[h/v]_[15/30/45/60/75]\n"
+                             "interaction_translation, interaction_rotation, interaction_full, interaction_hard",
+                        action="store", required=True)
+    parser.add_argument('-o', '--object',
+                        help="Available objects :"
+                             " clock, cookiejar, dog, dragon, kinect, lego, shoe, skull, turtle, walkman, wateringcan",
+                        action="store", required=True)
+
+    arguments = parser.parse_args()
+    root_path = arguments.root
+    sequence_name = arguments.sequence
+    object_name = arguments.object
+
+    model_path = os.path.join(root_path, "{}/geometry.ply".format(object_name))
+    sequence_path = os.path.join(root_path, "{}_{}".format(object_name, sequence_name))
 
     sequence = SequenceLoader(sequence_path)
-    renderer = ModelRenderer(model_path, "utils/shader", sequence.camera, [(sequence.camera.width, sequence.camera.height)])
+    renderer = ModelRenderer(model_path, "utils/shader", sequence.camera,
+                             [(sequence.camera.width, sequence.camera.height)])
 
     for pose, rgb, depth in sequence:
-
         rgb_render, depth_render = renderer.render_image(pose)
         rgb_render = set_hue(rgb_render, PURPLE_HUE)
 
