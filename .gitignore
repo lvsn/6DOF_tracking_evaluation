@@ -1,3 +1,5 @@
+ulaval_6dof_object_tracking/video_generator*.py
+sample/*
 .idea/*
 
 # Byte-compiled / optimized / DLL files

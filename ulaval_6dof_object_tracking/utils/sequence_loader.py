@@ -32,6 +32,12 @@ class SequenceLoader:
         self.current = 0
         return self
 
+    def __len__(self):
+        return self.size()
+
+    def __getitem__(self, i):
+        return self.get_frame(i)
+
     def __next__(self):
         if self.current > self.size():
             raise StopIteration
