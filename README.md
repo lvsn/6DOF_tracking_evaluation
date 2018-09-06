@@ -26,3 +26,22 @@ python visualize_sequence -r /path/to/sample -s interaction_hard -o clock
 
 ## Evaluation
 coming soon
+
+## License
+
+```
+License for Non-Commercial Use
+
+If this software is redistributed, this license must be included.
+The term software includes any source files, documentation, executables,
+models, and data.
+
+This software is available for general use by academic or non-profit,
+or government-sponsored researchers. This license does not grant the
+right to use this software or any derivation of it for commercial activities.
+For commercial use, please contact Jean-Francois Lalonde at Université Laval
+at jflalonde@gel.ulaval.ca.
+
+This software comes with no warranty or guarantee of any kind. By using this
+software, the user accepts full liability.
+```
