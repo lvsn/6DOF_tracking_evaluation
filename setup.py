@@ -7,5 +7,5 @@ setup(
     packages=find_packages(),
     author='Mathieu Garon',
     author_email='mathieugaron91@gmail.com',
-    requires=['numpy', 'Pillow', 'plyfile', 'pyopengl', 'vispy']
+    requires=['numpy', 'Pillow', 'plyfile', 'pyopengl', 'vispy', 'seaborn', 'pandas']
 )

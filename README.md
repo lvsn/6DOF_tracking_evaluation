@@ -25,7 +25,13 @@ python visualize_sequence -r /path/to/sample -s interaction_hard -o clock
 ```
 
 ## Evaluation
+### Running the trackers
 coming soon
+
+### Evaluating
+```bash
+python evaluate_sequence.py -g /path/to/ground_truth.csv -p /path/to/predictions.csv ```
+```
 
 ## License
 
