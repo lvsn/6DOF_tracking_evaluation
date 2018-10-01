@@ -90,10 +90,10 @@ if __name__ == '__main__':
     plt.suptitle("Distribution of inter-frame error")
     plt.show()
 
-    plt.subplot("221")
+    plt.subplot("121")
     plt.plot(t_error)
     plt.title("Translation error (m)")
-    plt.subplot("223")
+    plt.subplot("122")
     plt.plot(r_error)
     plt.title("Rotation error (rad)")
     plt.suptitle("Error between ground truth and prediction")

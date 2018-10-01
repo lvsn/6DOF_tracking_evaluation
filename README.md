@@ -29,8 +29,20 @@ python visualize_sequence -r /path/to/sample -s interaction_hard -o clock
 coming soon
 
 ### Evaluating
+Evaluating a single sequence : two csv files must be provided, one with ground truth poses and one with the predictions.
+Note that each row represent 16 values of a 4x4 transform matrix.
 ```bash
 python evaluate_sequence.py -g /path/to/ground_truth.csv -p /path/to/predictions.csv ```
+```
+
+Evaluating a batch of sequence : the following folder structure is needed:
+- root
+    - modelName
+        - object_sequence (ex: dragon_interaction_hard)
+            - ground_truth.csv
+            - prediction_pose.csv
+```bash
+python evaluate_batch.py -r /path/to/root ```
 ```
 
 ## License
