@@ -31,7 +31,7 @@ def index_results(root_path):
         n_sequences.append(len(sequence))
 
     # todo make sure that the same sequences are present in all models instead of just the quantity
-    if set(n_sequences) != 1:
+    if len(set(n_sequences)) != 1:
         print("[Warn]: some models have a different amount of sequences!")
         for model_type, sequence in sequences.items():
             print("\t{} : {} sequences".format(model_type, len(sequence)))
@@ -154,9 +154,9 @@ def plot_occlusion(dataframe, palette="Blues", legend_title=None, model_order=No
     plt.show()
 
 
-def sum_tracker_miss(df, model_order):
+def sum_tracker_miss(df):
     # here a tracking frame of 0 means that the tracker is reinitialized.
-    for model in model_order:
+    for model in df.model.unique():
         model_dataframe = df[df['model'] == model]
         lost_frames = model_dataframe.error_r == 0.0
         print("Model : {} failed {} times.".format(model, lost_frames.sum()))
@@ -188,6 +188,6 @@ if __name__ == '__main__':
 
     # Compute tracking fails for hard sequences only
     dataframe_tmp = df[df['sequence'].str.contains("hard")]
-    sum_tracker_miss(dataframe_tmp, model_order)
+    sum_tracker_miss(dataframe_tmp)
 
 
