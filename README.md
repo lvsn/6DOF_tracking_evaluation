@@ -52,7 +52,7 @@ coming soon
 ### Running the trackers
 coming soon
 
-## License
+# License
 
 ```
 License for Non-Commercial Use
