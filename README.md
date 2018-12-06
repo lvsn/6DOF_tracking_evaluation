@@ -26,7 +26,7 @@ python visualize_sequence -r /path/to/sample -s interaction_hard -o clock
 
 ### Training the trackers
 ## Generate the dataset
-Change the parameters in [generate_dataset.sh](https://github.com/lvsn/6DOF_tracking_evaluation/blob/master/6DOF_tracking_evaluation/scripts/dataset_generator.py).
+Change the parameters in [generate_dataset.sh](https://github.com/lvsn/6DOF_tracking_evaluation/blob/master/ulaval_6dof_object_tracking/scripts/generate_dataset.sh).
 And run to generate the training and validation dataset.
 
 ## Train the network
