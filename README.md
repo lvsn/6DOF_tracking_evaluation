@@ -3,7 +3,7 @@ Code to visualize and evaluate the dataset from "A Framework for Evaluating 6-DO
 
 The dataset can be downloaded at this [website](http://vision.gel.ulaval.ca/~jflalonde/projects/6dofObjectTracking/index.html).
 
-### Citation
+## Citation
 
 If you use this dataset in your research, please cite:
 
@@ -46,10 +46,10 @@ python evaluate_batch.py -r /path/to/root ```
 Change the parameters in [generate_dataset.sh](https://github.com/lvsn/6DOF_tracking_evaluation/blob/master/ulaval_6dof_object_tracking/scripts/generate_dataset.sh).
 And run to generate the training and validation dataset.
 
-### Train the network
+## Train the network
 coming soon
 
-### Running the trackers
+## Running the trackers
 coming soon
 
 # License
