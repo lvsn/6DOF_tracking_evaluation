@@ -11,7 +11,6 @@ import argparse
 import os
 
 import pandas as pd
-import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
@@ -181,7 +180,8 @@ if __name__ == '__main__':
     df = index_results(root_path)
     # manually set the order of each model
     # model_order = ["specific", "multi", "generic"]
-    model_order = ["specific", "specific_specular", "specific_rgb", "specific_specular_rgb"]
+
+    model_order = None
 
     plot_stability(df, model_order=model_order)
     plot_occlusion(df, model_order=model_order)

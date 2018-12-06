@@ -84,14 +84,6 @@ if __name__ == '__main__':
 
         blend = image_blend_gray(rgb_render[:, :, ::-1], rgb)
 
-        # check depth difference between model and depth
-        #depth = depth[1:-1, :]
-        #depth[depth_render == 0] = 0
-        #depth_diff = np.abs(depth_render.astype(np.float32) - depth.astype(np.float32))
-        #import matplotlib.pyplot as plt
-        #plt.imshow(depth_diff, vmin=0, vmax=20)
-        #plt.show()
-
         cv2.imshow("rgb", rgb[:, :, ::-1])
         cv2.imshow("blending", blend)
         cv2.waitKey(10)
