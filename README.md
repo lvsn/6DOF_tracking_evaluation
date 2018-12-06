@@ -24,18 +24,7 @@ Download the sample dataset [here (583 MB)](http://rachmaninoff.gel.ulaval.ca/st
 python visualize_sequence -r /path/to/sample -s interaction_hard -o clock
 ```
 
-### Training the trackers
-## Generate the dataset
-Change the parameters in [generate_dataset.sh](https://github.com/lvsn/6DOF_tracking_evaluation/blob/master/ulaval_6dof_object_tracking/scripts/generate_dataset.sh).
-And run to generate the training and validation dataset.
-
-## Train the network
-coming soon
-
-### Running the trackers
-coming soon
-
-### Evaluating
+## Evaluating
 Evaluating a single sequence : two csv files must be provided, one with ground truth poses and one with the predictions.
 Note that each row represent 16 values of a 4x4 transform matrix.
 ```bash
@@ -51,6 +40,17 @@ Evaluating a batch of sequence : the following folder structure is needed:
 ```bash
 python evaluate_batch.py -r /path/to/root ```
 ```
+
+# Tracker
+## Generate the dataset
+Change the parameters in [generate_dataset.sh](https://github.com/lvsn/6DOF_tracking_evaluation/blob/master/ulaval_6dof_object_tracking/scripts/generate_dataset.sh).
+And run to generate the training and validation dataset.
+
+### Train the network
+coming soon
+
+### Running the trackers
+coming soon
 
 ## License
 
