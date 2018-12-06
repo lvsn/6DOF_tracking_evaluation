@@ -181,7 +181,7 @@ if __name__ == '__main__':
     df = index_results(root_path)
     # manually set the order of each model
     # model_order = ["specific", "multi", "generic"]
-    model_order = None
+    model_order = ["specific", "specific_specular", "specific_rgb", "specific_specular_rgb"]
 
     plot_stability(df, model_order=model_order)
     plot_occlusion(df, model_order=model_order)

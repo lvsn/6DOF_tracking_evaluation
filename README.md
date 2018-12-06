@@ -24,7 +24,14 @@ Download the sample dataset [here (583 MB)](http://rachmaninoff.gel.ulaval.ca/st
 python visualize_sequence -r /path/to/sample -s interaction_hard -o clock
 ```
 
-## Evaluation
+### Training the trackers
+## Generate the dataset
+Change the parameters in [generate_dataset.sh](https://github.com/lvsn/6DOF_tracking_evaluation/blob/master/6DOF_tracking_evaluation/scripts/dataset_generator.py).
+And run to generate the training and validation dataset.
+
+## Train the network
+coming soon
+
 ### Running the trackers
 coming soon
 

@@ -1,0 +1,6 @@
+models: [
+    {
+    path: ./models/dragon,
+    },
+]
+
