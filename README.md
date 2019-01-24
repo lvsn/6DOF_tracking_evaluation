@@ -43,11 +43,12 @@ python evaluate_batch.py -r /path/to/root ```
 
 # Tracker
 ## Generate the dataset
-Change the parameters in [generate_dataset.sh](https://github.com/lvsn/6DOF_tracking_evaluation/blob/master/ulaval_6dof_object_tracking/scripts/generate_dataset.sh).
+Change the parameters in [generate_dataset.sh](https://github.com/lvsn/6DOF_tracking_evaluation/blob/master/ulaval_6dof_object_tracking/deeptrack/generate_dataset.sh).
 And run to generate the training and validation dataset.
 
 ## Train the network
-coming soon
+Change the parameters in [train_deeptrack.sh](https://github.com/lvsn/6DOF_tracking_evaluation/blob/master/ulaval_6dof_object_tracking/deeptrack/train_deeptrack.sh).
+And run to train the network.
 
 ## Running the trackers
 coming soon
