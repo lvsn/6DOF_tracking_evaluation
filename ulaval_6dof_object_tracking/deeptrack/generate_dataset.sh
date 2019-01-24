@@ -10,7 +10,6 @@ BOUNDING_BOX=0                          # Bounding box ratio w.r.t. maximum vert
 RESOLUTION=174                          # Resolution of the image samples
 DATA_TYPE=numpy                         # save type : numpy => large but fast to load. png => small put slower to load.
 
-cd ..
 export PYTHONPATH=$PYTHONPATH:"/home/mathieu/source/6DOF_tracking_evaluation"    # add your project path to PythonPath
 echo Generating training data...
 python3 dataset_generator.py -o ${SAVE_PATH}/train \

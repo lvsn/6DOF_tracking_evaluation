@@ -3,7 +3,7 @@ import json
 import numpy as np
 from PIL import Image
 
-from ulaval_6dof_object_tracking.utils.camera import Camera
+from ulaval_6dof_object_tracking.utils.camera_configs import Camera
 from ulaval_6dof_object_tracking.utils.transform import Transform
 
 

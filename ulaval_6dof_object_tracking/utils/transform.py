@@ -9,7 +9,7 @@ __version__ = "0.0.1"
 import numpy as np
 import random
 import math
-import utils.angles as ea
+import ulaval_6dof_object_tracking.utils.angles as ea
 
 
 class Transform:

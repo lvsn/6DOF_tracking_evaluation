@@ -2,7 +2,7 @@ from pytorch_toolbox.io import yaml_load
 
 from ulaval_6dof_object_tracking.utils.transform import Transform
 from ulaval_6dof_object_tracking.utils.camera import Camera
-from ulaval_6dof_object_tracking.deeptrack_loader_base import DeepTrackLoaderBase
+from ulaval_6dof_object_tracking.deeptrack.deeptrack_loader_base import DeepTrackLoaderBase
 from ulaval_6dof_object_tracking.utils.data import combine_view_transform, show_frames, compute_2Dboundingbox, normalize_scale
 from ulaval_6dof_object_tracking.utils.model_renderer import ModelRenderer
 from ulaval_6dof_object_tracking.utils.plyparser import PlyParser
@@ -22,8 +22,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Generate synthetic data for DeepTrack')
 
     parser.add_argument('-c', '--camera', help="camera json path", action="store",
-                        default="./utils/camera/synthetic.json")
-    parser.add_argument('--shader', help="shader path", action="store", default="./utils/shader")
+                        default="../utils/camera_configs/synthetic.json")
+    parser.add_argument('--shader', help="shader path", action="store", default="../utils/shader")
     parser.add_argument('-o', '--output', help="save path", action="store", default="./generated_data")
     parser.add_argument('-m', '--model', help="model file path", action="store", default="./model_config.yaml")
 

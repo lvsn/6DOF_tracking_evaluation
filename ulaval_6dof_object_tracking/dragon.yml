@@ -1,6 +1,0 @@
-models: [
-    {
-    path: ./models/dragon,
-    },
-]
-
