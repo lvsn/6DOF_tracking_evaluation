@@ -6,14 +6,15 @@ The dataset can be downloaded at this [website](http://vision.gel.ulaval.ca/~jfl
 ## Citation
 
 If you use this dataset in your research, please cite:
-
-	@article{Garon2018,
-		author = {Mathieu Garon, Denis Laurendeau and Jean-Fran\c{c}ois Lalonde},
-		title = {A Framework for Evaluating 6-DOF Object Trackers},
-		booktitle = {European conference on computer vision},
-		year = {2018}
-	}
-
+```
+@inproceedings{garon2018framework,
+	       title={A framework for evaluating 6-dof object trackers},
+	       author={Garon, Mathieu and Laurendeau, Denis and Lalonde, Jean-Fran{\c{c}}ois},
+	       booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
+	       pages={582--597},
+	       year={2018}
+}
+```
 }
 
 
