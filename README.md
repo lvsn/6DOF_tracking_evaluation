@@ -6,14 +6,15 @@ The dataset can be downloaded at this [website](http://vision.gel.ulaval.ca/~jfl
 ## Citation
 
 If you use this dataset in your research, please cite:
-
-	@article{Garon2018,
-		author = {Mathieu Garon, Denis Laurendeau and Jean-Fran\c{c}ois Lalonde},
-		title = {A Framework for Evaluating 6-DOF Object Trackers},
-		booktitle = {European conference on computer vision},
-		year = {2018}
-	}
-
+```
+@inproceedings{garon2018framework,
+	       title={A framework for evaluating 6-dof object trackers},
+	       author={Garon, Mathieu and Laurendeau, Denis and Lalonde, Jean-Fran{\c{c}}ois},
+	       booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
+	       pages={582--597},
+	       year={2018}
+}
+```
 }
 
 
@@ -43,11 +44,12 @@ python evaluate_batch.py -r /path/to/root ```
 
 # Tracker
 ## Generate the dataset
-Change the parameters in [generate_dataset.sh](https://github.com/lvsn/6DOF_tracking_evaluation/blob/master/ulaval_6dof_object_tracking/scripts/generate_dataset.sh).
+Change the parameters in [generate_dataset.sh](https://github.com/lvsn/6DOF_tracking_evaluation/blob/master/ulaval_6dof_object_tracking/deeptrack/generate_dataset.sh).
 And run to generate the training and validation dataset.
 
 ## Train the network
-coming soon
+Change the parameters in [train_deeptrack.sh](https://github.com/lvsn/6DOF_tracking_evaluation/blob/master/ulaval_6dof_object_tracking/deeptrack/train_deeptrack.sh).
+And run to train the network.
 
 ## Running the trackers
 coming soon
