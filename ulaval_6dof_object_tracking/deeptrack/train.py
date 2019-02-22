@@ -13,7 +13,7 @@ import numpy as np
 from pytorch_toolbox.transformations.compose import Compose
 
 from ulaval_6dof_object_tracking.deeptrack.data_augmentation import Occluder, HSVNoise, Background, GaussianNoise, \
-    GaussianBlur, DepthDownsample, OffsetDepth, NormalizeChannels, ToTensor
+    GaussianBlur, DepthDownsample, OffsetDepth, NormalizeChannels, ToTensor, ChannelHide
 from ulaval_6dof_object_tracking.deeptrack.deeptrack_callback import DeepTrackCallback
 from ulaval_6dof_object_tracking.deeptrack.deeptrack_loader import DeepTrackLoader
 from ulaval_6dof_object_tracking.deeptrack.deeptrack_net import DeepTrackNet
@@ -103,9 +103,10 @@ if __name__ == '__main__':
 
     posttransforms = [Compose([HSVNoise(0.07, 0.05, 0.1),
                                Background(background_path),
-                               GaussianNoise(2, 10),
+                               GaussianNoise(2, 5),
                                GaussianBlur(6),
                                DepthDownsample(0.7),
+                               ChannelHide(disable_proba=0.3),
                                OffsetDepth(),
                                NormalizeChannels(images_mean, images_std),
                                ToTensor()])]
