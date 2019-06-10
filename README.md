@@ -3,6 +3,9 @@ Code to visualize and evaluate the dataset from "A Framework for Evaluating 6-DO
 
 The dataset can be downloaded at this [website](http://vision.gel.ulaval.ca/~jflalonde/projects/6dofObjectTracking/index.html).
 
+## Dependencies
+To train the network, version 0.1 of [pytorch_toolbox](https://github.com/MathGaron/pytorch_toolbox/tree/v0.1) is required.
+
 ## Citation
 
 If you use this dataset in your research, please cite:
@@ -50,9 +53,6 @@ And run to generate the training and validation dataset.
 ## Train the network
 Change the parameters in [train_deeptrack.sh](https://github.com/lvsn/6DOF_tracking_evaluation/blob/master/ulaval_6dof_object_tracking/deeptrack/train_deeptrack.sh).
 And run to train the network.
-
-## Running the trackers
-coming soon
 
 # License
 
