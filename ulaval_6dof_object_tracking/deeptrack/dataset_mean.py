@@ -1,8 +1,8 @@
 import argparse
 
-from deep_6dof_tracking.data.deeptrack_loader import DeepTrackLoader
+from ulaval_6dof_object_tracking.deeptrack.deeptrack_loader import DeepTrackLoader
 from pytorch_toolbox.transformations.compose import Compose
-from deep_6dof_tracking.data.data_augmentation import Occluder, HSVNoise, Background, GaussianNoise, \
+from ulaval_6dof_object_tracking.deeptrack.data_augmentation import Occluder, HSVNoise, Background, GaussianNoise, \
     GaussianBlur, OffsetDepth, ToTensor, Transpose, DepthDownsample
 import os
 from tqdm import tqdm

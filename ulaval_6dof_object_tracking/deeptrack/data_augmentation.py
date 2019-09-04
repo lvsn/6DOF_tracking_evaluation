@@ -4,13 +4,13 @@ from scipy.misc import imresize
 import torch
 from skimage.measure import block_reduce
 
-from deep_6dof_tracking.data.deeptrack_loader import DeepTrackLoader
 import random
 import numpy as np
 
-from deep_6dof_tracking.data.rgbd_dataset import RGBDDataset
-from deep_6dof_tracking.data.utils import add_hsv_noise, depth_blend, gaussian_noise, color_blend, show_frames
-from deep_6dof_tracking.utils.transform import Transform
+from ulaval_6dof_object_tracking.deeptrack.deeptrack_loader import DeepTrackLoader
+from ulaval_6dof_object_tracking.utils.rgbd_dataset import RGBDDataset
+from ulaval_6dof_object_tracking.utils.data import add_hsv_noise, depth_blend, gaussian_noise, color_blend
+from ulaval_6dof_object_tracking.utils.transform import Transform
 
 
 class Occluder(object):
