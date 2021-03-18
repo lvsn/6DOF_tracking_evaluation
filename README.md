@@ -1,7 +1,7 @@
 # 6DOF_tracking_evaluation
 Code to visualize and evaluate the dataset from "A Framework for Evaluating 6-DOF Object Trackers" [\[arxiv paper\]](https://arxiv.org/abs/1803.10075).
 
-The dataset can be downloaded at this [website](http://vision.gel.ulaval.ca/~jflalonde/projects/6dofObjectTracking/index.html).
+The dataset can be downloaded at this [website](http://vision.gel.ulaval.ca/~jflalonde/publications/projects/6dofObjectTracking/index.html).
 
 ## Dependencies
 To train the network, version 0.1 of [pytorch_toolbox](https://github.com/MathGaron/pytorch_toolbox/tree/v0.1) is required.
